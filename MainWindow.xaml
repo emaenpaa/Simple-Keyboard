@@ -1,0 +1,93 @@
+﻿<Window x:Class="eggKeyboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eggKeyboard"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Topmost="True"
+        WindowStyle="None"
+        Focusable="False"
+        x:Name="Window"  
+        WindowState="Normal" 
+        ShowActivated="False" 
+        Loaded="Window_Loaded"
+        Height="265" 
+        Width="970"
+        MouseDown="Window_MouseDown"
+        FontFamily="Arial"
+        FontSize="20">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Opacity" Value=".85"></Setter>
+            <!--<Setter Property="Background" Value="#fff"></Setter>-->
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Button Name="btnTop" Content="Top" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="btnTop_Click" />
+        <!--First Row-->
+        <Button Name="btnTilde" Content="`" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn1" Content="1" HorizontalAlignment="Left" Margin="75,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn2" Content="2" HorizontalAlignment="Left" Margin="140,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn3" Content="3" HorizontalAlignment="Left" Margin="205,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn4" Content="4" HorizontalAlignment="Left" Margin="270,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn5" Content="5" HorizontalAlignment="Left" Margin="335,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn6" Content="6" HorizontalAlignment="Left" Margin="400,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn7" Content="7" HorizontalAlignment="Left" Margin="465,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn8" Content="8" HorizontalAlignment="Left" Margin="530,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn9" Content="9" HorizontalAlignment="Left" Margin="595,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btn0" Content="0" HorizontalAlignment="Left" Margin="660,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnDash" Content="-" HorizontalAlignment="Left" Margin="725,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnEqual" Content="=" HorizontalAlignment="Left" Margin="790,50,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="855,50,0,0" VerticalAlignment="Top" Width="90" Click="btn_click" />
+        <!--Second Row-->
+        <Button x:Name="btnTab" Content="" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="90" />
+        <Button Name="btnQ" Content="q" HorizontalAlignment="Left" Margin="105,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnW" Content="w" HorizontalAlignment="Left" Margin="170,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnE" Content="e" HorizontalAlignment="Left" Margin="235,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnR" Content="r" HorizontalAlignment="Left" Margin="300,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnT" Content="t" HorizontalAlignment="Left" Margin="365,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnY" Content="y" HorizontalAlignment="Left" Margin="430,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnU" Content="u" HorizontalAlignment="Left" Margin="495,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnI" Content="i" HorizontalAlignment="Left" Margin="560,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnO" Content="o" HorizontalAlignment="Left" Margin="625,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnP" Content="p" HorizontalAlignment="Left" Margin="690,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnOBracket" Content="[" HorizontalAlignment="Left" Margin="755,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnCBracket" Content="]" HorizontalAlignment="Left" Margin="820,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnBSlash" Content="\" HorizontalAlignment="Left" Margin="885,90,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <!--Third Row-->
+        <Button x:Name="btnCapsLock" Content="Caps Lock" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="110" Click="btnCapsLock_Click" />
+        <Button Name="btnA" Content="a" HorizontalAlignment="Left" Margin="125,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnS" Content="s" HorizontalAlignment="Left" Margin="190,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnD" Content="d" HorizontalAlignment="Left" Margin="255,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnF" Content="f" HorizontalAlignment="Left" Margin="320,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnG" Content="g" HorizontalAlignment="Left" Margin="385,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnH" Content="h" HorizontalAlignment="Left" Margin="450,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnJ" Content="j" HorizontalAlignment="Left" Margin="515,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnK" Content="k" HorizontalAlignment="Left" Margin="580,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnL" Content="l" HorizontalAlignment="Left" Margin="645,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnSemi" Content=";" HorizontalAlignment="Left" Margin="710,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnApost" Content="'" HorizontalAlignment="Left" Margin="775,130,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnEnter" Content="Enter" HorizontalAlignment="Left" Margin="840,130,0,0" VerticalAlignment="Top" Width="105" Click="btn_click" />
+        <!--Fourth Row-->
+        <Button Content="Shift" Name="btnShift" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="145" Click="btnShift_Click" />
+        <Button Name="btnZ" Content="z" HorizontalAlignment="Left" Margin="160,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnX" Content="x" HorizontalAlignment="Left" Margin="225,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnC" Content="c" HorizontalAlignment="Left" Margin="290,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnV" Content="v" HorizontalAlignment="Left" Margin="355,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnB" Content="b" HorizontalAlignment="Left" Margin="420,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnN" Content="n" HorizontalAlignment="Left" Margin="485,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnM" Content="m" HorizontalAlignment="Left" Margin="550,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnComma" Content="," HorizontalAlignment="Left" Margin="615,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnDot" Content="." HorizontalAlignment="Left" Margin="680,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnSlash" Content="/" HorizontalAlignment="Left" Margin="745,170,0,0" VerticalAlignment="Top" Width="60" Click="btn_click" />
+        <Button Name="btnRShift" Content="Shift" HorizontalAlignment="Left" Margin="810,170,0,0" VerticalAlignment="Top" Width="135" Click="btnShift_Click" />
+        <!--Fifth Row-->
+        <Button x:Name="btnCtrl" Content="Ctrl" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="90" Click="btnCtrl_Click" />
+        <Button x:Name="btnSpace" Content="" HorizontalAlignment="Left" Margin="105,210,0,0" VerticalAlignment="Top" Width="650" Click="btn_click" />
+        <Button x:Name="btnCtrl2" Content="Ctrl" HorizontalAlignment="Left" Margin="760,210,0,0" VerticalAlignment="Top" Width="90" Click="btnCtrl_Click" />
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="855,210,0,0" VerticalAlignment="Top" Width="90" Click="btn_click" />
+    </Grid>
+</Window>
